@@ -87,7 +87,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-size: 110% 110%;
   background: ${({ theme }) =>
     `linear-gradient(45deg, ${theme.colors.primary} 0%, ${theme.colors.black} 50%, ${theme.colors.primary} 100%)`};
@@ -96,11 +96,8 @@ const Container = styled.div`
   color: ${(props) => props.theme.colors.white};
   transition: all 0.2s ease-in-out;
 
-  ${({ theme }) => theme.breakpoints.down("sm")} {
-    padding-top: 20px;
-    padding-bottom: 50px;
-    height: 120vh;
-  }
+  padding-top: 20px;
+  padding-bottom: 50px;
 `;
 
 const Title = styled.span`
@@ -185,7 +182,7 @@ const TitleSubtitleContainer = styled.div`
 `;
 
 const SocialsBar = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   right: 30px;
   display: flex;
@@ -193,6 +190,7 @@ const SocialsBar = styled.div`
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  z-index: 10;
   span {
     font-family: ${({ theme }) => theme.fonts.thin};
   }

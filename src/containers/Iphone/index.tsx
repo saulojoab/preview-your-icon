@@ -136,9 +136,8 @@ export default function Iphone({
 const IphoneFrameContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 100%;
-  max-width: 420px;
-  max-height: 780px;
+  width: 420px;
+  height: 780px;
   overflow: hidden;
   z-index: 1;
   display: flex;
