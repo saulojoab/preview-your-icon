@@ -43,7 +43,9 @@ export default function App() {
     <Container>
       <SocialsBar>
         <span>{t("madeBy")} Saulo Joab </span>
-        <Link onClick={() => open("https://github.com/saulojoab")}>
+        <Link
+          onClick={() => open("https://github.com/saulojoab/preview-your-icon")}
+        >
           <FaGithub size={18} />
         </Link>
         <Link onClick={() => open("https://linkedin.com/in/saulojoab")}>
